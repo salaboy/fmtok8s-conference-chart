@@ -201,22 +201,6 @@ spec:
           resources: {}
           workingDir: /workspace
         - args:
-          - -c
-          - jx step next-version --use-git-tag-only --tag
-          command:
-          - /bin/sh
-          image: gcr.io/jenkinsxio-labs-private/jxl:0.0.136
-          name: tag-with-new-version
-          resources: {}
-        - args:
-          - '[ -d /builder/home ] || mkdir -p /builder && ln -s /tekton/home /builder/home'
-          command:
-          - /bin/sh
-          - -c
-          image: gcr.io/jenkinsxio/builder-jx:2.1.142-761
-          name: setup-builder-home
-          resources: {}
-        - args:
           - step
           - git
           - merge
@@ -231,6 +215,22 @@ spec:
           - jx
           image: gcr.io/jenkinsxio/builder-jx:2.1.142-761
           name: git-merge
+          resources: {}  
+        - args:
+          - -c
+          - jx step next-version --use-git-tag-only --tag
+          command:
+          - /bin/sh
+          image: gcr.io/jenkinsxio-labs-private/jxl:0.0.136
+          name: tag-with-new-version
+          resources: {}
+        - args:
+          - '[ -d /builder/home ] || mkdir -p /builder && ln -s /tekton/home /builder/home'
+          command:
+          - /bin/sh
+          - -c
+          image: gcr.io/jenkinsxio/builder-jx:2.1.142-761
+          name: setup-builder-home
           resources: {}
         - args:
           - gitops
