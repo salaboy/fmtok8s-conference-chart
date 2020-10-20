@@ -241,7 +241,7 @@ spec:
           name: jx-variables
           resources: {}
         - args:
-          - cd /workspace/source/charts/node-http && jx step helm build --verbose
+          - cd /workspace/source/fmtok8s-app && jx step helm build --verbose
           command:
           - /bin/sh
           - -c
