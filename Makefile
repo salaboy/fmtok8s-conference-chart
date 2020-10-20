@@ -1,5 +1,5 @@
 CHART_REPO := http://jenkins-x-chartmuseum:8080
-NAME := springone-app
+NAME := fmtok8s-app
 OS := $(shell uname)
 
 CHARTMUSEUM_CREDS_USR := $(shell cat /builder/home/basic-auth-user.json)
@@ -14,33 +14,33 @@ setup: init
 	helm repo add releases ${CHART_REPO}
 
 build: clean setup
-	helm dependency build springone-app
-	helm lint springone-app
+	helm dependency build fmtok8s-app
+	helm lint fmtok8s-app
 
 install: clean build
-	helm upgrade ${NAME} springone-app --install
+	helm upgrade ${NAME} fmtok8s-app --install
 
 upgrade: clean build
-	helm upgrade ${NAME} springone-app --install
+	helm upgrade ${NAME} fmtok8s-app --install
 
 delete:
-	helm delete --purge ${NAME} springone-app
+	helm delete --purge ${NAME} fmtok8s-app
 
 clean:
-	rm -rf springone-app/charts
-	rm -rf springone-app/${NAME}*.tgz
-	rm -rf springone-app/requirements.lock
+	rm -rf fmtok8s-app/charts
+	rm -rf fmtok8s-app/${NAME}*.tgz
+	rm -rf fmtok8s-app/requirements.lock
 
 release: clean build
 ifeq ($(OS),Darwin)
-	sed -i "" -e "s/version:.*/version: $(VERSION)/" springone-app/Chart.yaml
+	sed -i "" -e "s/version:.*/version: $(VERSION)/" fmtok8s-app/Chart.yaml
 
 else ifeq ($(OS),Linux)
-	sed -i -e "s/version:.*/version: $(VERSION)/" springone-app/Chart.yaml
+	sed -i -e "s/version:.*/version: $(VERSION)/" fmtok8s-app/Chart.yaml
 else
 	exit -1
 endif
-	helm package springone-app
+	helm package fmtok8s-app
 	curl --fail -u $(CHARTMUSEUM_CREDS_USR):$(CHARTMUSEUM_CREDS_PSW) --data-binary "@$(NAME)-$(VERSION).tgz" $(CHART_REPO)/api/charts
 	rm -rf ${NAME}*.tgz
 	jx step changelog  --verbose --version $(VERSION) --rev $(PULL_BASE_SHA)
