@@ -233,7 +233,7 @@ spec:
           name: jx-variables
           resources: {}
         - args:
-          - cd /workspace/source/charts/fmtok8s-app && jx step helm build
+          - cd /workspace/source/fmtok8s-app && jx step helm build
           command:
           - /bin/sh
           - -c
