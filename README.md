@@ -1,2 +1,2 @@
 # FMTOK8S-fmtok8s-app
-From Monolith to K8s :: SpringOne Application Parent Helm Chart 
+From Monolith to K8s :: Application Parent Helm Chart 
