@@ -7,8 +7,8 @@ metadata:
     build: "1"
     jenkins.io/pipelineType: build
     owner: jenkins-x-quickstarts
-    repository: node-http
-  name: jenkins-x-quickstarts-node-http-nhrkq-1
+    repository: fmtok8s-app
+  name: jenkins-x-quickstarts-fmtok8s-app-nhrkq-1
 spec:
   pipelineSpec:
     params:
@@ -241,7 +241,7 @@ spec:
           name: jx-variables
           resources: {}
         - args:
-          - cd /workspace/source/charts/node-http && jx step helm build --verbose
+          - cd /workspace/source/charts/fmtok8s-app && jx step helm build --verbose
           command:
           - /bin/sh
           - -c
