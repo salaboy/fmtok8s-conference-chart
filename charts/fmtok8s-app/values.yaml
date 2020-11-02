@@ -5,15 +5,14 @@
 fmtok8s-agenda:
   knativeDeploy: true
 
-# global:
-#   zeebe: zeebe
+fmtok8s-c4p:
+  knativeDeploy: true
 
-# fmtok8s-c4p: 
-#     env:
-#         ZEEBE_CLIENT_BROKER_CONTACTPOINT : zeebe:26500
-# fmtok8s-agenda: 
-#     env:
-#         ZEEBE_CLIENT_BROKER_CONTACTPOINT : zeebe:26500 
-# fmtok8s-email: 
-#     env:
-#         ZEEBE_CLIENT_BROKER_CONTACTPOINT : zeebe:26500                
+fmtok8s-email:
+  knativeDeploy: true
+
+fmtok8s-api-gateway:
+  knativeDeploy: true
+
+fmtok8s-speakers:
+  knativeDeploy: true
