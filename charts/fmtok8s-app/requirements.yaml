@@ -4,10 +4,14 @@ dependencies:
   version: 0.0.54
 - name: fmtok8s-c4p
   repository: http://jenkins-x-chartmuseum:8080
-  version: 0.0.55
+  version: 0.0.58
 - name: fmtok8s-api-gateway
   repository: http://jenkins-x-chartmuseum:8080
   version: 0.0.107
 - name: fmtok8s-email
   repository: http://jenkins-x-chartmuseum:8080
-  version: 0.0.40
+  version: 0.0.45
+- name: fmtok8s-speakers
+  repository: http://jenkins-x-chartmuseum:8080
+  version: 0.0.7
+  
