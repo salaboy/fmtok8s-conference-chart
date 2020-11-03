@@ -14,6 +14,6 @@ dependencies:
 - name: fmtok8s-speakers
   repository: http://jenkins-x-chartmuseum:8080
   version: 0.0.10
-- name: kubernetes-external-secrets
+- name: external-secrets/kubernetes-external-secrets
   repository: https://godaddy.github.io/kubernetes-external-secrets
   version: 6.0.0 
