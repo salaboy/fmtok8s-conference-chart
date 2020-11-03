@@ -241,7 +241,7 @@ spec:
           name: promote-changelog
           resources: {}
         - args:
-          - jx gitops helm release
+          - helm repo add external-secrets https://godaddy.github.io/kubernetes-external-secrets && jx gitops helm release
           command:
           - /bin/sh
           - -c
