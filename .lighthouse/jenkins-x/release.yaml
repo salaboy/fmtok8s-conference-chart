@@ -225,6 +225,14 @@ spec:
           name: jx-variables
           resources: {}
         - args:
+          - helm repo add go-daddy https://godaddy.github.io/kubernetes-external-secrets
+          command:
+          - /bin/sh
+          - -c
+          image: gcr.io/jenkinsxio/builder-maven:2.1.150-769
+          name: build-helm-build
+          resources: {}  
+        - args:
           - cd /workspace/source/charts/fmtok8s-app && jx step helm build --verbose
           command:
           - /bin/sh
