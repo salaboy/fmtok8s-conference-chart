@@ -1,1 +1,5 @@
-SpringOne Conference Application
+Cloud-Native Conference Platform
+
+Chart Deployed: {{ .Chart.Name }} - {{ .Chart.Version }}
+Release Name: {{ .Release.Name }}
+
