@@ -1,16 +1,19 @@
 dependencies:
 - name: fmtok8s-agenda
   repository: http://jenkins-x-chartmuseum:8080
-  version: 0.0.55
+  version: 0.0.56
 - name: fmtok8s-c4p
   repository: http://jenkins-x-chartmuseum:8080
-  version: 0.0.60
+  version: 0.0.61
 - name: fmtok8s-api-gateway
   repository: http://jenkins-x-chartmuseum:8080
   version: 0.0.119
 - name: fmtok8s-email
   repository: http://jenkins-x-chartmuseum:8080
-  version: 0.0.47
+  version: 0.0.48
 - name: fmtok8s-speakers
   repository: http://jenkins-x-chartmuseum:8080
-  version: 0.0.9
+  version: 0.0.10
+- name: external-secrets
+  repository: https://godaddy.github.io/kubernetes-external-secrets/
+  version: 6.0.0 
