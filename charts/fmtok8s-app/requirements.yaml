@@ -15,5 +15,5 @@ dependencies:
   repository: http://jenkins-x-chartmuseum:8080
   version: 0.0.10
 - name: kubernetes-external-secrets
-  repository: https://godaddy.github.io/kubernetes-external-secrets
+  repository: external-secrets
   version: 6.0.0 
