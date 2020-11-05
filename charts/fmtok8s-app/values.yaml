@@ -26,5 +26,5 @@ fmtok8s-speakers:
   externalSecretForZeebe: true
 
 zeebe-cloud-events-router:
-  knativeDeploy: true
+  knativeDeploy: false
   externalSecretForZeebe: true
