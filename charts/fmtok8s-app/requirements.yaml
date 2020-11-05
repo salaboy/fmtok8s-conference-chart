@@ -14,3 +14,6 @@ dependencies:
 - name: fmtok8s-speakers
   repository: http://jenkins-x-chartmuseum:8080
   version: 0.0.13
+- name: zeebe-cloud-events-router
+  repository: http://jenkins-x-chartmuseum:8080
+  version: 0.0.50  

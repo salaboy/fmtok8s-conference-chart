@@ -1,0 +1,12 @@
+apiVersion: eventing.knative.dev/v1
+kind: Trigger
+metadata:
+  name: agenda-item-created-trigger
+  namespace: default
+spec:
+  broker: default
+  filter:
+    attributes:
+      type: Agenda.ItemCreated
+  subscriber:
+    uri: http://zeebe-cloud-events-router.default.svc.cluster.local/message
