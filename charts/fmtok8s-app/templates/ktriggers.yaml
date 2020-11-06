@@ -10,3 +10,17 @@ spec:
       type: Agenda.ItemCreated
   subscriber:
     uri: http://zeebe-cloud-events-router.default.svc.cluster.local/message
+
+---
+apiVersion: eventing.knative.dev/v1
+kind: Trigger
+metadata:
+  name: email-sent-trigger
+  namespace: default
+spec:
+  broker: default
+  filter:
+    attributes:
+      type: Email.Sent
+  subscriber:
+    uri: http://zeebe-cloud-events-router.default.svc.cluster.local/message        
