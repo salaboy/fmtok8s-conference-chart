@@ -24,3 +24,31 @@ spec:
       type: Email.Sent
   subscriber:
     uri: http://zeebe-cloud-events-router.default.svc.cluster.local/message        
+
+---
+apiVersion: eventing.knative.dev/v1
+kind: Trigger
+metadata:
+  name: proposal-received-trigger
+  namespace: default
+spec:
+  broker: default
+  filter:
+    attributes:
+      type: C4P.ProposalReceived
+  subscriber:
+    uri: http://zeebe-cloud-events-router.default.svc.cluster.local/message     
+
+---
+apiVersion: eventing.knative.dev/v1
+kind: Trigger
+metadata:
+  name: proposal-decision-made-trigger
+  namespace: default
+spec:
+  broker: default
+  filter:
+    attributes:
+      type: C4P.ProposalDecisionMade
+  subscriber:
+    uri: http://zeebe-cloud-events-router.default.svc.cluster.local/message       
