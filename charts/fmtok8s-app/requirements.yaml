@@ -2,18 +2,18 @@ dependencies:
 - name: fmtok8s-agenda
   repository: http://jenkins-x-chartmuseum:8080
   version: 0.0.72
-- name: fmtok8s-c4p
+- name: fmtok8s-c4p-rest
   repository: http://jenkins-x-chartmuseum:8080
-  version: 0.0.67
+  version: 0.0.2
 - name: fmtok8s-api-gateway
   repository: http://jenkins-x-chartmuseum:8080
   version: 0.0.120
 - name: fmtok8s-email
   repository: http://jenkins-x-chartmuseum:8080
   version: 0.0.52
-- name: fmtok8s-speakers
-  repository: http://jenkins-x-chartmuseum:8080
-  version: 0.0.13
-- name: zeebe-cloud-events-router
-  repository: http://jenkins-x-chartmuseum:8080
-  version: 0.0.51
+#- name: fmtok8s-speakers
+#  repository: http://jenkins-x-chartmuseum:8080
+#  version: 0.0.13
+#- name: zeebe-cloud-events-router
+#  repository: http://jenkins-x-chartmuseum:8080
+#  version: 0.0.51
