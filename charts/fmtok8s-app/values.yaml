@@ -4,19 +4,22 @@
 
 fmtok8s-agenda:
   knativeDeploy: true
-  EVENTS_ENABLED: false
+  env:
+    EVENTS_ENABLED: false
   #externalSecretForZeebe: true
 
 fmtok8s-c4p-rest:
   knativeDeploy: true
-  EVENTS_ENABLED: false
-  AGENDA_SERVICE: http://fmtok8s-agenda.default.svc.cluster.local
-  EMAIL_SERVICE: http://fmtok8s-email.default.svc.cluster.local
+  env:
+    EVENTS_ENABLED: false
+    AGENDA_SERVICE: http://fmtok8s-agenda.default.svc.cluster.local
+    EMAIL_SERVICE: http://fmtok8s-email.default.svc.cluster.local
   #externalSecretForZeebe: true
 
 fmtok8s-email:
   knativeDeploy: true
-  EVENTS_ENABLED: false
+  env:
+    EVENTS_ENABLED: false
   #externalSecretForZeebe: true
 fmtok8s-api-gateway:
   knativeDeploy: true
