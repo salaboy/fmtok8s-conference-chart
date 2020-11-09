@@ -2,25 +2,24 @@
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
-fmtok8s-agenda-rest:
-  knativeDeploy: true
-  env:
-    EVENTS_ENABLED: false
-
-fmtok8s-c4p-rest:
-  knativeDeploy: true
-  env:
-    EVENTS_ENABLED: false
-    AGENDA_SERVICE: http://fmtok8s-agenda.default.svc.cluster.local
-    EMAIL_SERVICE: http://fmtok8s-email.default.svc.cluster.local
-
-fmtok8s-email-rest:
-  knativeDeploy: true
-  env:
-    EVENTS_ENABLED: false
 fmtok8s-api-gateway:
   knativeDeploy: true
   env:
     AGENDA_SERVICE: http://fmtok8s-agenda.default.svc.cluster.local
     C4P_SERVICE: http://fmtok8s-c4p.default.svc.cluster.local
     EMAIL_SERVICE: http://fmtok8s-email.default.svc.cluster.local
+
+fmtok8s-agenda-rest:
+  knativeDeploy: true
+  env:
+    EVENTS_ENABLED: false
+fmtok8s-c4p-rest:
+  knativeDeploy: true
+  env:
+    EVENTS_ENABLED: false
+    AGENDA_SERVICE: http://fmtok8s-agenda.default.svc.cluster.local
+    EMAIL_SERVICE: http://fmtok8s-email.default.svc.cluster.local
+fmtok8s-email-rest:
+  knativeDeploy: true
+  env:
+    EVENTS_ENABLED: false
