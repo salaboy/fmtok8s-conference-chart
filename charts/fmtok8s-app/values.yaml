@@ -11,15 +11,10 @@ fmtok8s-api-gateway:
 
 fmtok8s-agenda-rest:
   knativeDeploy: true
-  env:
-    EVENTS_ENABLED: false
 fmtok8s-c4p-rest:
   knativeDeploy: true
   env:
-    EVENTS_ENABLED: false
     AGENDA_SERVICE: http://fmtok8s-agenda.default.svc.cluster.local
     EMAIL_SERVICE: http://fmtok8s-email.default.svc.cluster.local
 fmtok8s-email-rest:
   knativeDeploy: true
-  env:
-    EVENTS_ENABLED: false
