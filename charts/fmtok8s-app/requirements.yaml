@@ -1,7 +1,7 @@
 dependencies:
 - name: fmtok8s-api-gateway
   repository: http://jenkins-x-chartmuseum:8080
-  version: 0.0.121
+  version: 0.0.123
 - name: fmtok8s-agenda-rest
   repository: http://jenkins-x-chartmuseum:8080
   version: 0.0.2
