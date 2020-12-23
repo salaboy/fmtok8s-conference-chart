@@ -22,59 +22,6 @@ spec:
         - image: gcr.io/jenkinsxio/jx-release-version:1.0.42
           name: next-version
           resources: {}
-<<<<<<< HEAD
-          workingDir: /workspace
-        - args:
-          - gitops
-          - git
-          - setup
-          - --namespace
-          - jx-git-operator
-          command:
-          - jx
-          image: gcr.io/jenkinsxio/jx-cli:latest
-          name: git-setup
-          resources: {}
-          workingDir: /workspace
-        - args:
-          - -c
-          - jx step next-version --use-git-tag-only --tag
-          command:
-          - /bin/sh
-          image: gcr.io/jenkinsxio-labs-private/jxl:0.0.136
-          name: tag-with-new-version
-          resources: {}
-        - args:
-          - '[ -d /builder/home ] || mkdir -p /builder && ln -s /tekton/home /builder/home'
-          command:
-          - /bin/sh
-          - -c
-          image: gcr.io/jenkinsxio/builder-jx:2.1.142-761
-          name: setup-builder-home
-          resources: {}
-        - args:
-          - gitops
-          - variables
-          command:
-          - jx
-          image: gcr.io/jenkinsxio/jx-cli:latest
-          name: jx-variables
-          resources: {}
-        - args:
-          - cd /workspace/source/charts/fmtok8s-app && jx step helm build --verbose
-          command:
-          - /bin/sh
-          - -c
-          image: gcr.io/jenkinsxio/builder-maven:2.1.150-769
-          name: build-helm-build
-          resources: {}
-        - args:
-          - source /workspace/source/.jx/variables.sh && jx step changelog --version v${VERSION}
-          command:
-          - /bin/bash
-          - -c
-          image: gcr.io/jenkinsxio/builder-go:2.1.142-761
-=======
           script: |
             #!/usr/bin/env bash
             VERSION=$(jx-release-version)
@@ -87,7 +34,6 @@ spec:
             #!/usr/bin/env sh
             jx gitops variables
         - image: gcr.io/jenkinsxio/jx-changelog:0.0.17
->>>>>>> update jenkins-x (https://github.com/jenkins-x/jx3-pipeline-catalog) from master (3ca699962b74084ba3766e343094f013238fb4ed) to master (fb3a12720f13d7f444e409eaea02f43a03b5e456)
           name: promote-changelog
           resources: {}
           script: |
