@@ -23,3 +23,5 @@ fmtok8s-email-rest:
   knativeDeploy: true
 EOF  
 ```
+
+For more information check: https://github.com/salaboy/from-monolith-to-k8s
