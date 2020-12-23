@@ -1,4 +1,4 @@
-Cloud-Native Conference Platform
+Cloud-Native Conference Platform V1
 
 Chart Deployed: {{ .Chart.Name }} - {{ .Chart.Version }}
 Release Name: {{ .Release.Name }}
