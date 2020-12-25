@@ -1,0 +1,12 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: frontend 
+spec:
+  rules:
+  - http:
+      paths:
+      - path: /
+        backend:
+          serviceName: fmtok8s-api-gateway 
+          servicePort: 80
