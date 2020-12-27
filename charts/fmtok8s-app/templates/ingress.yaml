@@ -7,6 +7,9 @@ spec:
   - http:
       paths:
       - path: /
+        pathType: Prefix
         backend:
-          serviceName: fmtok8s-api-gateway 
-          servicePort: 80
+          service:
+            name: fmtok8s-api-gateway 
+            port: 
+              number: 80
