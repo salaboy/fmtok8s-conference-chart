@@ -2,6 +2,8 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: frontend 
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
   - http:
@@ -10,6 +12,6 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: fmtok8s-api-gateway 
+            name: fmtok8s-api-gateway
             port: 
               number: 80
