@@ -19,13 +19,13 @@ keywords:
 dependencies:
 - name: fmtok8s-api-gateway
   repository: http://jenkins-x-chartmuseum:8080
-  version: 0.0.160
+  version: 0.0.161
 - name: fmtok8s-agenda-rest
   repository: http://jenkins-x-chartmuseum:8080
-  version: 0.0.10
+  version: 0.0.11
 - name: fmtok8s-c4p-rest
   repository: http://jenkins-x-chartmuseum:8080
-  version: 0.0.17
+  version: 0.0.18
 - name: fmtok8s-email-rest
   repository: http://jenkins-x-chartmuseum:8080
-  version: 0.0.10
+  version: 0.0.11
