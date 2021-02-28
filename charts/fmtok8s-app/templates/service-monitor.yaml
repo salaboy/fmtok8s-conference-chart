@@ -1,0 +1,18 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: fmtok8s-servicemonitor 
+  labels:
+    release: myprometheus
+spec:
+  selector:
+    matchLabels:
+      draft: draft-app
+  namespaceSelector:
+    matchNames:
+      - default
+  jobLabel: service-stats
+  endpoints:
+  - path: /actuator/prometheus
+    targetPort: http
+    interval: 15s
