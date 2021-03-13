@@ -3,7 +3,7 @@ kind: ServiceMonitor
 metadata:
   name: fmtok8s-servicemonitor 
   labels:
-    release: myprometheus
+    release: my-prometheus
 spec:
   selector:
     matchLabels:
@@ -14,5 +14,5 @@ spec:
   jobLabel: service-stats
   endpoints:
   - path: /actuator/prometheus
-    targetPort: http
+    port: http
     interval: 15s
