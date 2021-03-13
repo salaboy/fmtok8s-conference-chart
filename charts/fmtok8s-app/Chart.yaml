@@ -1,7 +1,7 @@
 apiVersion: v2
 description: A Helm chart for a Conference Platform App
 name: fmtok8s-app
-version: 0.0.1-SNAPSHOT
+version: 0.0.127
 type: application
 icon: https://rawgit.com/jenkins-x/jenkins-x-platform/08df980/images/kubernetes.png
 appVersion: 1.0.0
