@@ -1,1 +1,2 @@
-
+serviceMonitorEnabled: false
+grafanaDashboardEnabled: false
