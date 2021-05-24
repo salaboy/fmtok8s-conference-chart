@@ -22,10 +22,10 @@ dependencies:
   version: 0.0.210
 - name: fmtok8s-agenda-rest
   repository: http://jenkins-x-chartmuseum:8080
-  version: 0.0.25
+  version: 0.0.26
 - name: fmtok8s-c4p-rest
   repository: http://jenkins-x-chartmuseum:8080
-  version: 0.0.42
+  version: 0.0.44
 - name: fmtok8s-email-rest
   repository: http://jenkins-x-chartmuseum:8080
-  version: 0.0.20
+  version: 0.0.21
