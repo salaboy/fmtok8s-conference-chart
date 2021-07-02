@@ -4,7 +4,7 @@ From Monolith to K8s :: Application Parent Helm Chart
 This version can be configured to work with Knative Services by using the following install command which overrides the values.yaml file:
 
 ```
-cat <<EOF | h install fmtok8s workshop/fmtok8s-app --values=-
+cat <<EOF | helm install app fmtok8s/fmtok8s-app --values=-
 fmtok8s-api-gateway:
   knativeDeploy: true
   env:
