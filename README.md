@@ -21,7 +21,7 @@ fmtok8s-c4p-rest:
     EMAIL_SERVICE: http://fmtok8s-email.default.svc.cluster.local
 fmtok8s-email-rest:
   knativeDeploy: true
-EOF  
+EOF
 ```
 
 For more information check: https://github.com/salaboy/from-monolith-to-k8s
