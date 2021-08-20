@@ -1,6 +1,7 @@
 # Compiled class file
 *.class
-
+charts/fmtok8s-app/Chart.lock
+charts/fmtok8s-app/charts/
 # Log file
 *.log
 

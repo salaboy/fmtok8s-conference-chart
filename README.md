@@ -26,4 +26,11 @@ EOF
 
 For more information check: https://github.com/salaboy/from-monolith-to-k8s
 
-touch
+## Release
+
+```
+helm dependency build
+helm package .
+```
+
+Then copy to http://github.com/salaboy/helm and run `release.sh` then push
