@@ -1,0 +1,65 @@
+name: From Monolith to K8s (Github Actions)
+on: [ push ]
+
+env:
+  OWNER: salaboy
+  GH_PAGES_BRANCH_NAME: gh-pages
+
+permissions:
+  packages: write
+
+jobs:
+  setup:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Info
+        run: echo "Building ${{ github.repository }} application, branch/tag ${{ github.ref_name}}"
+      - name: From Monolith to K8S CI
+        id: fmtok8s_ci
+        uses: salaboy/fmtok8s-ci@main
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          default_branch: main
+      - name: Set up Docker Meta
+        id: docker_meta
+        uses: docker/metadata-action@v3
+        with:
+          images: |
+            ghcr.io/${{ github.repository }}
+          tags: |
+            type=ref,event=branch
+            type=ref,event=pr,
+            type=semver,pattern={{raw}}
+      - name: Docker Meta Output
+        run: echo "Docker meta tags ${{ steps.docker_meta.outputs.tags }}"
+    outputs:
+      docker_tags: ${{ steps.docker_meta.outputs.tags }}
+      docker_labels: ${{ steps.docker_meta.outputs.labels }}
+      execute_helm_publish: ${{ steps.fmtok8s_ci.outputs.execute_helm_publish }}
+      execute_docker_publish: ${{ steps.fmtok8s_ci.outputs.execute_docker_publish }}
+      execute_native_publish: ${{ steps.fmtok8s_ci.outputs.execute_native_publish }}
+      version_to_use: ${{ steps.fmtok8s_ci.outputs.version_to_use }}
+
+  publish_chart:
+    runs-on: ubuntu-20.04
+    needs: [ setup ]
+    if: ${{ needs.setup.outputs.execute_helm_publish == 'true' }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Change Chart.yml
+        uses: fjogeleit/yaml-update-action@main
+        with:
+          valueFile: 'helm/fmtok8s-conference-chart/Chart.yaml'
+          propertyPath: 'version'
+          value: '${{ needs.setup.outputs.version_to_use }}'
+          commitChange: false
+          updateFile: true
+      - name: Release Helm Chart
+        uses: stefanprodan/helm-gh-pages@master
+        with:
+          charts_dir: helm
+          token: ${{ secrets.PACKAGE_TOKEN }}
+          repository: helm
+          branch: ${{ env.GH_PAGES_BRANCH_NAME }}
+          owner: ${{ env.OWNER }}

@@ -1,6 +1,6 @@
 apiVersion: v2
 description: A Helm chart for a Conference Platform App
-name: fmtok8s-app
+name: fmtok8s-conference-chart
 version: 0.1.0
 type: application
 icon: https://rawgit.com/jenkins-x/jenkins-x-platform/08df980/images/kubernetes.png
@@ -17,15 +17,15 @@ keywords:
   - kubernetes
   - tutorial
 dependencies:
-- name: fmtok8s-api-gateway
+- name: fmtok8s-frontend
   repository: https://salaboy.github.io/helm/
-  version: 0.1.0
-- name: fmtok8s-agenda-rest
+  version: v0.1.0
+- name: fmtok8s-agenda-service
   repository: https://salaboy.github.io/helm/
-  version: 0.1.0
-- name: fmtok8s-c4p-rest
+  version: v0.1.0
+- name: fmtok8s-c4p-service
   repository: https://salaboy.github.io/helm/
-  version: 0.1.0
-- name: fmtok8s-email-rest
+  version: v0.1.0
+- name: fmtok8s-email-servie
   repository: https://salaboy.github.io/helm/
-  version: 0.1.0
+  version: v0.1.0

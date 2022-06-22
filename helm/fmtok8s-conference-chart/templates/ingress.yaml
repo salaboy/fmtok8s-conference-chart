@@ -13,6 +13,6 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: fmtok8s-api-gateway
+            name: fmtok8s-frontend
             port: 
               number: 80

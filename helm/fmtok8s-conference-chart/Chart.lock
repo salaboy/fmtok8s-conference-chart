@@ -1,0 +1,15 @@
+dependencies:
+- name: fmtok8s-api-gateway
+  repository: https://salaboy.github.io/helm/
+  version: 0.1.0
+- name: fmtok8s-agenda-rest
+  repository: https://salaboy.github.io/helm/
+  version: 0.1.0
+- name: fmtok8s-c4p-rest
+  repository: https://salaboy.github.io/helm/
+  version: 0.1.0
+- name: fmtok8s-email-rest
+  repository: https://salaboy.github.io/helm/
+  version: 0.1.0
+digest: sha256:01d3031f58e47c8d4a3822706eb448d6f488a988e958a3b1f41e2ee9901200e1
+generated: "2021-08-20T10:45:54.786918+01:00"
