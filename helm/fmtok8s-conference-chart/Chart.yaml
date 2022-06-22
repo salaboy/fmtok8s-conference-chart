@@ -3,7 +3,7 @@ description: A Helm chart for a Conference Platform App
 name: fmtok8s-conference-chart
 version: 0.1.0
 type: application
-icon: https://rawgit.com/jenkins-x/jenkins-x-platform/08df980/images/kubernetes.png
+icon: https://salaboy.files.wordpress.com/2019/07/avatar.png
 appVersion: 0.1.0
 maintainers: 
   - name: salaboy
@@ -26,6 +26,6 @@ dependencies:
 - name: fmtok8s-c4p-service
   repository: https://salaboy.github.io/helm/
   version: v0.1.0
-- name: fmtok8s-email-servie
+- name: fmtok8s-email-service
   repository: https://salaboy.github.io/helm/
   version: v0.1.0
