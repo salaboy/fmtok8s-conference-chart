@@ -19,7 +19,7 @@ keywords:
 dependencies:
 - name: fmtok8s-frontend
   repository: https://salaboy.github.io/helm/
-  version: v0.1.1
+  version: v0.1.0
 - name: fmtok8s-agenda-service
   repository: https://salaboy.github.io/helm/
   version: v0.1.0
