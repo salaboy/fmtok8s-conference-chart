@@ -34,6 +34,7 @@ jobs:
         run: echo "Docker meta tags ${{ steps.docker_meta.outputs.tags }}"
     outputs:
       version_to_use: ${{ steps.fmtok8s_ci.outputs.version_to_use }}
+      execute_helm_publish: ${{ steps.fmtok8s_ci.outputs.execute_helm_publish }}
   publish_chart:
     runs-on: ubuntu-20.04
     needs: [ setup ]
