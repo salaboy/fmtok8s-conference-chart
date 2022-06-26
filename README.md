@@ -17,8 +17,6 @@ cat <<EOF | helm install conference-knative fmtok8s/fmtok8s-conference-chart --v
 fmtok8s-frontend:
   knative:
     enabled: true
-  prometheus:
-    enabled: true
   env:
     KNATIVE_ENABLED: "true"
     FRONTEND_AGENDA_SERVICE: http://fmtok8s-agenda.default.svc.cluster.local
@@ -27,12 +25,8 @@ fmtok8s-frontend:
 fmtok8s-email-service:
   knative:
     enabled: true
-  prometheus:
-    enabled: true
 fmtok8s-c4p-service:
   knative:
-    enabled: true
-  prometheus:
     enabled: true
   env:
     C4P_AGENDA_SERVICE: http://fmtok8s-agenda.default.svc.cluster.local
@@ -40,8 +34,6 @@ fmtok8s-c4p-service:
 fmtok8s-agenda-service:
   knative:
     enabled: true
-  prometheus:
-    enabled: true 
 EOF
 ```
 
