@@ -32,3 +32,4 @@ dependencies:
 - name: bitnami/kube-prometheus
   repository: https://charts.bitnami.com/bitnami
   condition: prometheus.enabled
+  version: 8.0.8
