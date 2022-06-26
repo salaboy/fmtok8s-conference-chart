@@ -31,3 +31,4 @@ dependencies:
   version: v0.1.0
 - name: bitnami/kube-prometheus
   repository: https://charts.bitnami.com/bitnami
+  condition: prometheus.enabled
