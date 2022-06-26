@@ -33,13 +33,7 @@ jobs:
       - name: Docker Meta Output
         run: echo "Docker meta tags ${{ steps.docker_meta.outputs.tags }}"
     outputs:
-      docker_tags: ${{ steps.docker_meta.outputs.tags }}
-      docker_labels: ${{ steps.docker_meta.outputs.labels }}
-      execute_helm_publish: ${{ steps.fmtok8s_ci.outputs.execute_helm_publish }}
-      execute_docker_publish: ${{ steps.fmtok8s_ci.outputs.execute_docker_publish }}
-      execute_native_publish: ${{ steps.fmtok8s_ci.outputs.execute_native_publish }}
       version_to_use: ${{ steps.fmtok8s_ci.outputs.version_to_use }}
-
   publish_chart:
     runs-on: ubuntu-20.04
     needs: [ setup ]

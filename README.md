@@ -33,7 +33,7 @@ fmtok8s-c4p-service:
     C4P_EMAIL_SERVICE: http://fmtok8s-email.default.svc.cluster.local  
 fmtok8s-agenda-service:
   knative:
-    enabled: true 
+    enabled: true
 EOF
 ```
 
