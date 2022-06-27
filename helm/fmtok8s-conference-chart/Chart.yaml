@@ -36,4 +36,4 @@ dependencies:
 - name: grafana
   repository: https://charts.bitnami.com/bitnami
   version: 7.9.8
-  condition: prometheus.enabled
+  condition: grafana.enabled
