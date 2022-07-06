@@ -2,7 +2,6 @@
 *.class
 helm/fmtok8s-conference-chart/Chart.lock
 helm/fmtok8s-conference-chart/charts
-helm/fmtok8s-conference-chart/charts/*.tgz
 # Log file
 *.log
 
