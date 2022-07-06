@@ -5,5 +5,5 @@ metadata:
   labels:
     app.kubernetes.io/instance: {{ .Release.Name }}
 spec:
-  url: https://raw.githubusercontent.com/ThomasVitale/spring-io-2022-spring-cloud-gateway/main/platform/grafana/dashboards/jvm.json
+  url: https://raw.githubusercontent.com/salaboy/fmtok8s-conference-chart/main/platform/grafana/dashboards/jvm.json
   
