@@ -1,21 +1,3 @@
-apiVersion: v2
-description: A Helm chart for a Conference Platform App
-name: fmtok8s-conference-chart
-version: 0.1.1
-type: application
-icon: https://salaboy.files.wordpress.com/2019/07/avatar.png
-appVersion: 0.1.0
-maintainers: 
-  - name: salaboy
-    email: salaboy@gmail.com
-    url: http://salaboy.com
-home: http://github.com/salaboy/from-monolith-to-k8s    
-keywords:
-  - cloudnative
-  - example
-  - cd
-  - kubernetes
-  - tutorial
 dependencies:
 - name: fmtok8s-frontend
   repository: https://salaboy.github.io/helm/
@@ -31,9 +13,9 @@ dependencies:
   version: v0.1.0
 - name: kube-prometheus
   repository: https://charts.bitnami.com/bitnami
-  condition: prometheus.enabled
   version: 8.0.8
 - name: grafana-operator
   repository: https://charts.bitnami.com/bitnami
   version: 2.6.4
-  condition: grafana.enabled
+digest: sha256:45fbaf1508cecd4cd112821d9f8cf9a6af3eca424358dce2558f64bb829df709
+generated: "2022-07-05T20:50:54.170081884-03:00"

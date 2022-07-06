@@ -1,0 +1,9 @@
+apiVersion: integreatly.org/v1alpha1
+kind: GrafanaDashboard
+metadata:
+  name: jvm
+  labels:
+    app.kubernetes.io/instance: {{ .Release.Name }}
+spec:
+  url: https://raw.githubusercontent.com/ThomasVitale/spring-io-2022-spring-cloud-gateway/main/platform/grafana/dashboards/jvm.json
+  
