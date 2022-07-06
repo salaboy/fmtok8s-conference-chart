@@ -1,6 +1,0 @@
-prometheus:
-  url: http://localhost:9090
-  enabled: true
-
-grafana:
-  enabled: true
