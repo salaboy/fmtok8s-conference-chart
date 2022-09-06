@@ -6,7 +6,7 @@ metadata:
   labels:
     
 spec:
-  name: middleware.yaml
+  name: grafana-loki.yaml
   datasources:
     - name: Loki
       type: loki
