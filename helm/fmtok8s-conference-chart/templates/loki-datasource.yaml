@@ -11,7 +11,7 @@ spec:
     - name: Loki
       type: loki
       access: proxy
-      url: {{ .Release.Name }}-grafana-loki-gateway:3100
+      url: {{ .Release.Name }}-grafana-loki-gateway
       isDefault: false
       version: 1
       editable: true
