@@ -37,3 +37,7 @@ dependencies:
   repository: https://charts.bitnami.com/bitnami
   version: 2.6.4
   condition: grafana.enabled
+- name: bitnami/grafana-loki
+  repository: https://charts.bitnami.com/bitnami
+  version: 2.3.2
+  condition: loki.enabled
