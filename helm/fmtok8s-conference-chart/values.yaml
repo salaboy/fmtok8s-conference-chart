@@ -1,2 +1,6 @@
 grafana:
   enabled: false
+loki:
+  enabled: false
+prometheus:
+  enabled: false

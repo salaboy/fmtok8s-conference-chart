@@ -1,5 +1,7 @@
-Cloud-Native Conference Platform V1
+Cloud-Native Conference Application V1
 
 Chart Deployed: {{ .Chart.Name }} - {{ .Chart.Version }}
 Release Name: {{ .Release.Name }}
 
+
+Access the Application Frontend by running `kubectl port-forward svc/fmtok8s-frontend -n {{ .Release.Namespace }} 8080:80`
